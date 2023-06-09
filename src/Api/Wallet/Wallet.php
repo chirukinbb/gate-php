@@ -18,16 +18,9 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
-
-    public function getDepositAddress(array $data=[]){
-        $this->type='GET';
-        $this->path='/api/v4/wallet/deposit_address';
-        $this->data=$data;
-        return $this->exec();
-    }
     
     /**
-     *GET /wallet/withdrawals
+     *GET /wallet/withdraw_status
      * */
     public function getWithdrawStatus(array $data=[]){
         $this->type='GET';
@@ -72,12 +65,6 @@ class Wallet extends Request
     public function getSubAccountTransfers(array $data=[]){
         $this->type='GET';
         $this->path='/api/v4/wallet/sub_account_transfers';
-        $this->data=$data;
-        return $this->exec();
-    }
-    public function getWithdrawStatus(array $data=[]){
-        $this->type='GET';
-        $this->path='/api/v4/wallet/withdraw_status';
         $this->data=$data;
         return $this->exec();
     }
