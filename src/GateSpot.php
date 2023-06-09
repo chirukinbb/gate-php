@@ -10,6 +10,7 @@ use Lin\Gate\Api\Spot\Currency;
 use Lin\Gate\Api\Spot\Market;
 use Lin\Gate\Api\Spot\My;
 use Lin\Gate\Api\Spot\Order;
+use Lin\Gate\Api\Wallet\Wallet;
 
 class GateSpot
 {
@@ -45,6 +46,14 @@ class GateSpot
     function setOptions(array $options=[]){
         $this->options=$options;
     }
+
+    /**
+     *
+     * */
+    function clearOption(string $name){
+        if (isset($this->options[$name]))
+            unset($this->options[$name]);
+    }
     
     /**
      * 
@@ -58,6 +67,13 @@ class GateSpot
      * */
     function currency(){
         return new Currency($this->init());
+    }
+
+    /**
+     *
+     * */
+    function wallet(){
+        return new Wallet($this->init());
     }
     
     /**

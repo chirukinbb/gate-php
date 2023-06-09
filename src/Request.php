@@ -156,7 +156,7 @@ class Request
 
         try {
             return json_decode($this->send(),true);
-        }catch (RequestException $e){
+        }catch (RequestException $e){print_r($e->getMessage());
             if(method_exists($e->getResponse(),'getBody')){
                 $contents=$e->getResponse()->getBody()->getContents();
 
