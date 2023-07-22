@@ -71,7 +71,7 @@ class Wallet extends Request
 
     public function getAssetsChains(array $data=[])
     {
-        $this->type='POST';
+        $this->type='GET';
         $this->path='/api/v4/wallet/currency_chains';
         $this->data=$data;
         return $this->exec();
