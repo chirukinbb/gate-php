@@ -76,4 +76,12 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
+
+    public function getAssetsFee(array $data=[])
+    {
+        $this->type='GET';
+        $this->path='/api/v4/wallet/withdraw_status';
+        $this->data=$data;
+        return $this->exec();
+    }
 }
