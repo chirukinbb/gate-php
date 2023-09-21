@@ -18,7 +18,7 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
-    
+
     /**
      *GET /wallet/withdraw_status
      * */
@@ -28,7 +28,7 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
-    
+
     /**
      *GET /wallet/deposits
      * */
@@ -38,7 +38,7 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
-    
+
     /**
      *POST /wallet/transfers
      * */
@@ -48,7 +48,7 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
-    
+
     /**
      *POST /wallet/sub_account_transfers
      * */
@@ -58,7 +58,7 @@ class Wallet extends Request
         $this->data=$data;
         return $this->exec();
     }
-    
+
     /**
      *GET /wallet/sub_account_transfers
      * */
